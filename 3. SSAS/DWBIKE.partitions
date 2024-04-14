@@ -1,0 +1,65 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2b1da10d-8398-4173-8df2-0b6fe4ff0fee" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DWBIKE</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>FACT SERVICE TRANSACTION</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8cbc7d93-0941-4c94-84f6-e9533df1fbc1">
+          <ID>FACT SERVICE TRANSACTION</ID>
+          <Name>FACT SERVICE TRANSACTION</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4a360347-2e17-4f66-bca1-4d0940c5fe44">
+            <DataSourceViewID>DWBIKE</DataSourceViewID>
+            <TableID>dbo_FACT_SERVICE_TRANSACTION</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT PROMOTION TRACKING</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="537090f7-f398-4025-a014-4b9ff5bed27c">
+          <ID>FACT PROMOTION TRACKING</ID>
+          <Name>FACT PROMOTION TRACKING</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="25fa565a-03c8-48c2-8e70-2d7fbf120094">
+            <DataSourceViewID>DWBIKE</DataSourceViewID>
+            <TableID>dbo_FACT_PROMOTION_TRACKING</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT ORDER TRANSACTION</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4b617304-7cda-46d3-be32-9f7fd9463ddc">
+          <ID>FACT ORDER TRANSACTION</ID>
+          <Name>FACT ORDER TRANSACTION</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="745c202f-dc32-4354-b15d-c63537ab1852">
+            <DataSourceViewID>DWBIKE</DataSourceViewID>
+            <TableID>dbo_FACT_ORDER_TRANSACTION</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
