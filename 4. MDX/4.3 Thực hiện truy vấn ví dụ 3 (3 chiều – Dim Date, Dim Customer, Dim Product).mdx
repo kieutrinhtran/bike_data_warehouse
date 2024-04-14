@@ -1,0 +1,21 @@
+WITH MEMBER [GROWTH RATE] AS
+ROUND(IIF(
+             	([DIM DATE].[Year].&[2022], [Measures].[Revenue]) = 0, NULL,
+      		 (
+            	([DIM DATE].[Year].&[2023], [Measures].[Revenue])
+       	     - ([DIM DATE].[Year].&[2022], [Measures].[Revenue])
+      		 )
+                     	   /
+             	([DIM DATE].[Year].&[2022], [Measures].[Revenue])
+ 	), 2)
+MEMBER [Measures].[REVENUEE] AS ROUND([Measures].[Revenue], 2)
+SELECT {[Measures].[FACT ORDER TRANSACTION Count],
+              	   [Measures].[REVENUEE],
+                     	   [GROWTH RATE]} on AXIS (0),
+NON EMPTY
+ORDER (
+[DIM PRODUCT].[Brand].children * 
+   	[DIM PRODUCT].[Category].children * [DIM CUSTOMER].[Hierarchy].[State].&[CA] ,
+                     	     	[GROWTH RATE], BDESC) on AXIS (1),
+              	     	[DIM DATE].[Year].&[2023]on AXIS (2)
+FROM [DWBIKE]

@@ -1,0 +1,16 @@
+WITH
+MEMBER [Measures].[Transaction Count] AS 
+[Measures].[FACT ORDER TRANSACTION Count]
+MEMBER [Measures].[Total Revenue] AS 
+ROUND([Measures].[Revenue], 2)
+SELECT
+{
+	[Measures].[Transaction Count],
+	[Measures].[Total Revenue]
+} ON AXIS (0),
+TOPCOUNT(
+	[DIM TIME].[Hierarchy].[Day Time Bucket].MEMBERS * 
+[DIM CUSTOMER].[State].[ALL], 3, 
+[Measures].[Transaction Count]) ON AXIS(1),
+[DIM DATE].[Hierarchy].[Year].[2023] ON AXIS (2)
+FROM [DWBIKE]

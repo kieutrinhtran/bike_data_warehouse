@@ -1,0 +1,20 @@
+WITH MEMBER [Measures].[ROI] AS
+ROUND( IIF(
+  	[Measures].[Promotion Revenue] > 0 AND [Measures].[Promotion Cost] > 0,
+  	([Measures].[Promotion Revenue] / [Measures].[Promotion Cost]), NULL
+	),2)
+ 
+MEMBER [Measures].[Total_Revenue] AS
+  ROUND ([Measures].[Promotion Revenue],2)
+ 
+MEMBER [Measures].[Total_Cost] AS
+  ROUND( [Measures].[Promotion Cost],2)
+ 
+SELECT {[Measures].[ROI], [Measures].[Promotion Cost],
+       	           	[Measures].[Promotion Revenue]} ON AXIS(0),
+TOPCOUNT(
+  	     [DIM MARKETING CAMPAIGN].[Campaign].Children *
+     	      	[DIM PRODUCT].[Hierarchy].[Product],
+      3, [Measures].[ROI]) ON AXIS(1),
+[DIM DATE].[Year] ON AXIS(2)
+FROM [DWBIKE]

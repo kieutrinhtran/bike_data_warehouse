@@ -1,0 +1,15 @@
+WITH MEMBER [PROPORTION OF TOTAL TRANSACTION]
+   	AS ROUND(([DIM SERVICE TYPE].[Type Name],
+               	     	[Measures].[FACT SERVICE TRANSACTION Count])
+   	   	   	/
+SUM ([DIM SERVICE TYPE].[Type Name].[ALL],
+    	  	   	[Measures].[FACT SERVICE TRANSACTION Count]), 2)
+SELECT {[Measures].[FACT SERVICE TRANSACTION Count],
+          	  	   [PROPORTION OF TOTAL TRANSACTION]} ON AXIS (0),
+NON EMPTY
+ORDER (
+{[DIM CUSTOMER].[State].&[CA]} *
+   	{[DIM SERVICE TYPE].[Type Name].CHILDREN},
+                 	  	[PROPORTION OF TOTAL TRANSACTION], BDESC) ON AXIS (1),
+[DIM DATE].[Year] ON AXIS (2)
+FROM [DWBIKE]
