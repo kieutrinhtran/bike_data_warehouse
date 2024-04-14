@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DWBIKE", "DWBIKE\DWBIKE.dwproj", "{2360C7D7-2D8E-4A82-9F4A-E99144AB2406}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2360C7D7-2D8E-4A82-9F4A-E99144AB2406}.Development|Default.ActiveCfg = Development
+		{2360C7D7-2D8E-4A82-9F4A-E99144AB2406}.Development|Default.Build.0 = Development
+		{2360C7D7-2D8E-4A82-9F4A-E99144AB2406}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93346B43-ACC7-4EC6-9F4A-A50D5709D3CC}
+	EndGlobalSection
+EndGlobal
