@@ -1,8 +1,8 @@
 # bike_data_warehouse
-Đồ án môn học Kho dữ liệu.
-- Tạo bộ dữ liệu excel.
-- Tạo cơ sở dữ liệu
-- Đổ dữ liệu từ excel vào kho dữ liệu bằng SQL Server Integration Services (SSIS) trên Visual Studio
-- Xây dựng một kho dữ liệu hoàn chỉnh bằng SQL Server Analysis Services (SSAS) trên Visual Studio
-- Thực hiện truy vấn MDX trên Visual Studio
-- Trực quan hóa dữ liệu bằng Power BI
+Course Project: Data Warehouse
+- Create 12 datasets.
+- Create a database.
+- Import data from Excel into the data warehouse using SQL Server Integration Services (SSIS) in Visual Studio
+- Build a complete data warehouse using SQL Server Analysis Services (SSAS) in Visual Studio
+- Execute MDX queries in Visual Studio
+- Visualize data using Power BI
